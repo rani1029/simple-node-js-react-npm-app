@@ -17,5 +17,6 @@ pipeline {
                 // Save build outputs (dist/ folder) in Jenkins
                 archiveArtifacts artifacts: 'dist/**', fingerprint: true
             }
+        }
     }
 }
