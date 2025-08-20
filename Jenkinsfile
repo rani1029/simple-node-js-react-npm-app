@@ -1,9 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Build js app') { 
+        stage('install dependencies') { 
             steps {
                 sh 'npm install' 
+            }
+        }
+        stage('Build') {
+            steps {
+                // If your app has a build script in package.json
+                sh 'npm run build'
             }
         }
     }
